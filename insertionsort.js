@@ -1,0 +1,20 @@
+
+
+
+let arr = [100, 2, 44, 5, 3, 21, 1, 16, 7, 2];
+
+// insertion sort
+for (i = 1; i < arr.length; i++){
+  current = arr[i];
+  j = i - 1
+  while (j >= 0 && arr[j] > current) {
+    arr[j + 1] = arr[j]
+    j--;
+  }
+
+  arr[j+1]=current
+
+}
+
+
+console.log(arr)
