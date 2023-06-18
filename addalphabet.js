@@ -3,7 +3,7 @@ function change(string, key) {
     console.log(keey)
     let newarray = [string.length];
   
-    console.log(newarray)
+   
   
     for (let i = 0; i < string.length; i++) {
   

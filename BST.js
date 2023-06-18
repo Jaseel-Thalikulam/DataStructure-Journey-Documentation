@@ -137,6 +137,7 @@ class BSTree{
       }
       deleteNode(root, element) {
         if (root === null) {
+            
           return root;
   
         } else {
