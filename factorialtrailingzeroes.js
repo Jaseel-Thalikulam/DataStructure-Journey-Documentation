@@ -6,4 +6,4 @@ function factorialTrailingZeroes(n) {
     }
   }
   
-  console.log(factorialTrailingZeroes(10)); 
+  console.log(factorialTrailingZeroes(10));  

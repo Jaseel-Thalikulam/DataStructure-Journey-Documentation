@@ -51,6 +51,31 @@ class LinkedList {
             console.log(listValue)
         }
     }
+
+    
+  delete(value) {
+    if (!this.head) {
+      console.log('noooo head')
+      return 
+    } else {
+      if (this.head.value == value) {
+        this.head = this.head.next
+        return
+         
+      } else {
+        let previous = null
+        let current = this.head
+        while (current) {
+          if (current.value == value) {
+            previous.next = current.next
+            return
+          }
+          previous = current
+          current = current.next
+        }
+      }
+    }
+  }
 }
 
 

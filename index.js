@@ -1,79 +1,71 @@
-class Node{
-    constructor(element) {
-        this.element = element
-        this.left = null
-        this.right = null
+class Node {
+  constructor(value) {
+    this.value = value
+    this.next = null
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null
+    this.size = 0
+  }
+  prepend(value) {
+    let node = new Node(value)
+    if (this.head == null) {
+      this.head = node
+    } else {
+      node.next = this.head
+      this.head = node
     }
+  }
+  print() {
+    if (this.head == null) {
+      console.log("Empty")
+    } else {
+      let list = ''
+      let current = this.head
+      while (current) {
+        list += ` ${current.value}`
+        current = current.next
+      }
+      console.log(list)
+    }
+  }
+
+  delete(value) {
+    if (!this.head) {
+      console.log('noooo head')
+      return 
+    } else {
+      if (this.head.value == value) {
+        this.head = this.head.next
+        return
+         
+      } else {
+        let previous = null
+        let current = this.head
+        while (current) {
+          if (current.value == value) {
+            previous.next = current.next
+            return
+          }
+          previous = current
+          current = current.next
+        }
+      }
+    }
+  }
 }
 
 
-class BSTree {
-    constructor() {
-        this.root = null
-    }
+list = new LinkedList()
+list.prepend(22)
+list.prepend(27)
+list.prepend(67)
+list.prepend(99)
+list.prepend(19)
+list.prepend(779)
+list.delete(67)
 
-
-    insert(element) {
-        node = new Node(element)
-        
-        if (this.root==null) {
-            this.root =  node
-        } else {
-            this.insertChild(this.root,node)
-        }
-
-    }
-
-    insertChild(root, node) {
-        if (element < root.element) {
-            if (root.left == null) {
-                root.left = node
-            } else {
-                this. insertChild(root.left,node)
-            }
-        } else {
-            if (root.right == null) {
-                root.right = node
-            } else {
-                this.insertChild(root.right,node)
-            }
-                
-        }
-    }
-
-
-    search(root, element) {
-        if (!root) {
-            return false
-        } else {
-            if (element < root.element) {
-                return this.search(root.left,element)
-            } else if (element > root.element) {
-                return this.search(root.right,element)
-                
-            } else {
-                return true
-            }
-        }             
-    }
-
-    preorder(root) {
-        console.log(root.element)
-        this.preorder(root.left)
-        this.preorder(root.right)
-    }
-    inorder(root) {
-        this.preorder(root.left)
-        console.log(root.element)
-        this.preorder(root.right)
-    }
-    postorder(root) {
-        this.preorder(root.left)
-        this.preorder(root.right)
-        console.log(root.element)
-    }
-
-
-
-}
-
+list.print()
