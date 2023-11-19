@@ -8,7 +8,7 @@ class Node{
 
 
 
-class BSTree{
+class BSTree{       
     constructor() { 
         this.root = null;
     }
@@ -82,8 +82,8 @@ class BSTree{
     }
     postorder(root){
         if (root) {
-           this.inorder(root.left)
-            this.inorder(root.right)
+           this.postorder(root.left)
+            this.postorder(root.right)
             console.log(root.element)
        }
    } 
