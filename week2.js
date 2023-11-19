@@ -13,7 +13,8 @@ function bubbleSorting(arr1) {
   let arr1 = [33, 2, 255, 6, 7, 88, 4, 32, 6, 33, 2];
   bubbleSorting(arr1);
 
-//   //Insertion sorting
+
+//Insertion sorting
 function insertionSort(arr) {
   for (let i = 1; i < arr.length; i++) {
     let curr = arr[i];
@@ -49,21 +50,22 @@ function selectionSort(arr2) {
   }
   console.log("Selection sort : "+arr2);
 }
+
 let arr2 = [221,44, 444, 33, 2, 6, 7878, 54, 6];
 selectionSort(arr2);
 
 
-function selectionsortof(arr){
-  for(i=0;i<arr.length-1;i++){
-      for(j=i+1;j<arr.length;j++){
-          if(arr[i]>arr[j]){
-              [arr[i],arr[j]]=[arr[j],arr[i]]
-          }
-      }
-  }
-  console.log(arr);
-}
-selectionsortof(arr19)
+// function selectionsortof(arr){
+//   for(i=0;i<arr.length-1;i++){
+//       for(j=i+1;j<arr.length;j++){
+//           if(arr[i]>arr[j]){
+//               [arr[i],arr[j]]=[arr[j],arr[i]]
+//           }
+//       }
+//   }
+//   console.log(arr);
+// }
+// selectionsortof(arr19)
 
 
 // //quick sort
@@ -102,6 +104,7 @@ function mergeSort(arr) {
         return merge(mergeSort(leftArray), mergeSort(rightArray))
     }
 }
+
 function merge(leftArray, rightArray) {
     const sortedArray = []
     while (leftArray.length && rightArray.length) {

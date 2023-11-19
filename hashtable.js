@@ -25,7 +25,7 @@ class HashTable {
 
     remove(key){
         const index = this.hash(key);
-        this.table[index] = undefined;
+        this.table[index] = null;
     }
 
     get(key){

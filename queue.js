@@ -5,7 +5,7 @@ class Node {
     }
   }
   
-  
+   
   class Queue{
     constructor() {
       this.front = null;
@@ -14,7 +14,7 @@ class Node {
   
   
     Enqueue(element) { 
-      const node = new Queue(element);
+      const node = new Node(element);
       if (!this.front) {
         this.front=this.rear=node
       } else {
@@ -33,7 +33,7 @@ class Node {
         if (this.front == null) {
           this.rear = null;
   
-        }
+        } 
       }
     }
   
