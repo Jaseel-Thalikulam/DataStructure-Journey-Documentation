@@ -6,8 +6,6 @@ class Node{
     }
 }
 
-
-
 class BSTree{       
     constructor() { 
         this.root = null;
@@ -25,7 +23,6 @@ class BSTree{
         } else {
             this.insertChild(this.root, node);
         }
-        
     }
 
 
